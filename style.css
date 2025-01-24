@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body,
+html {
+  overflow: auto;
+}
+
+.webGl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
