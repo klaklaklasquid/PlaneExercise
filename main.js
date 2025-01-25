@@ -20,7 +20,7 @@ const canvas = document.querySelector("canvas.webGl");
 const scene = new THREE.Scene();
 
 //? Models
-gltfLoader.load("./static/models/plane.glb", (gltf) => {
+gltfLoader.load("/models/plane.glb", (gltf) => {
   gltf.scene.rotation.y = Math.PI;
   scene.add(gltf.scene);
 });
@@ -47,15 +47,15 @@ const sizes = {
 };
 
 window.addEventListener("resize", () => {
-  // Update sizes
+  //? Update sizes
   sizes.width = window.innerWidth;
   sizes.height = window.innerHeight;
 
-  // Update camera
+  //? Update camera
   camera.aspect = sizes.width / sizes.height;
   camera.updateProjectionMatrix();
 
-  // Update renderer
+  //? Update renderer
   renderer.setSize(sizes.width, sizes.height);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 });
